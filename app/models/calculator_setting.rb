@@ -1,0 +1,2 @@
+class CalculatorSetting < ApplicationRecord
+end
