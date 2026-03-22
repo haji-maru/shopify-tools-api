@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: shopify-tools-api
+    runtime: ruby
+    buildCommand: bundle install
+    startCommand: bundle exec rails db:migrate && bundle exec rails server -p $PORT -e $RAILS_ENV
+    envVars:
+      - key: RAILS_ENV
+        value: production
